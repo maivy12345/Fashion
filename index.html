@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nurfia — Fashion Affiliate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="header-inner container">
+      <button type="button" class="nav-toggle" aria-label="Mở menu" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+      <a class="logo" href="#">Nurfia</a>
+      <nav class="main-nav" id="mainNav">
+        <ul>
+          <li><a href="#women">Women</a></li>
+          <li><a href="#men">Men</a></li>
+          <li><a href="#dresses">Dresses</a></li>
+          <li><a href="#journal">Journal</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button type="button" class="icon-btn" aria-label="Tìm kiếm" id="searchBtn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+        </button>
+        <a href="#account" class="icon-btn" aria-label="Tài khoản">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </a>
+        <button type="button" class="icon-btn cart-btn" aria-label="Giỏ hàng" id="cartBtn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M6 6L5 3H2"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+    <div class="search-bar" id="searchBar" hidden>
+      <div class="container search-bar-inner">
+        <input type="search" placeholder="Tìm váy, áo khoác, phụ kiện…" aria-label="Tìm kiếm sản phẩm" />
+        <button type="button" class="btn-text" id="searchClose">Đóng</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hero-slider">
+      <div class="hero-slide active" style="--hero-img: url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1920&q=80')">
+        <div class="hero-content container">
+          <p class="eyebrow">Summer 2026</p>
+          <h1>Now Trending for Summer</h1>
+          <p class="lead">Timeless silhouettes meet modern confidence. Clean lines, effortless elegance, and a refined look designed for everyday sophistication.</p>
+          <a href="#featured" class="btn btn-primary">Choose your summer style</a>
+        </div>
+      </div>
+      <div class="hero-slide" style="--hero-img: url('https://images.unsplash.com/photo-1509631179647-0177331693ae?w=1920&q=80')">
+        <div class="hero-content container">
+          <p class="eyebrow">New attitude</p>
+          <h1>Now Trending for Summer</h1>
+          <p class="lead">Designed for those who value simplicity and strength. Contemporary forms, balanced details, and a confident summer attitude.</p>
+          <a href="#wardrobe" class="btn btn-outline-light">Choose your summer style</a>
+        </div>
+      </div>
+      <div class="hero-dots" role="tablist" aria-label="Chọn slide">
+        <button type="button" class="hero-dot active" aria-selected="true" aria-label="Slide 1"></button>
+        <button type="button" class="hero-dot" aria-selected="false" aria-label="Slide 2"></button>
+      </div>
+    </section>
+
+    <section class="section wardrobe" id="wardrobe">
+      <div class="container narrow text-center">
+        <h2>Redefine Your Wardrobe</h2>
+        <nav class="category-pills">
+          <a href="#dresses">Dresses</a>
+          <a href="#men">Men</a>
+          <a href="#women">T-shirts</a>
+          <a href="#women">Women</a>
+        </nav>
+      </div>
+    </section>
+
+    <section class="section product-grid-section" id="dresses">
+      <div class="container">
+        <div class="product-grid" id="dressGrid">
+          <!-- Products injected style in HTML for simplicity -->
+          <article class="product-card" data-id="1">
+            <div class="product-image-wrap">
+              <span class="badge-sale">-40%</span>
+              <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600&q=80" alt="Asymmetric tulle midi dress" loading="lazy" width="600" height="750" />
+              <button type="button" class="quick-add" data-title="Asymmetric tulle midi dress">Add to cart</button>
+            </div>
+            <div class="product-info">
+              <h3>Asymmetric tulle midi dress</h3>
+              <div class="rating" data-rating="4"><span class="stars"></span><span class="rating-text">4.00 (3)</span></div>
+            </div>
+          </article>
+          <article class="product-card" data-id="2">
+            <div class="product-image-wrap">
+              <span class="badge-sale">-19%</span>
+              <img src="https://images.unsplash.com/photo-1572804013309-59a98b7e92f1?w=600&q=80" alt="Creased-effect midi dress" loading="lazy" width="600" height="750" />
+              <button type="button" class="quick-add" data-title="Creased-effect midi dress">Add to cart</button>
+            </div>
+            <div class="product-info">
+              <h3>Creased-effect midi dress</h3>
+              <div class="rating" data-rating="4"><span class="stars"></span><span class="rating-text">4.00 (3)</span></div>
+            </div>
+          </article>
+          <article class="product-card" data-id="3">
+            <div class="product-image-wrap">
+              <span class="badge-sale">-22%</span>
+              <img src="https://images.unsplash.com/photo-1566174050879-90f9f8e7f7e6?w=600&q=80" alt="Draped strapless dress" loading="lazy" width="600" height="750" />
+              <button type="button" class="quick-add" data-title="Draped strapless dress">Add to cart</button>
+            </div>
+            <div class="product-info">
+              <h3>Draped strapless dress</h3>
+              <div class="rating" data-rating="3.33"><span class="stars"></span><span class="rating-text">3.33 (3)</span></div>
+            </div>
+          </article>
+          <article class="product-card" data-id="4">
+            <div class="product-image-wrap">
+              <span class="badge-sale">-21%</span>
+              <img src="https://images.unsplash.com/photo-1515372030864-a23e31ad57cb?w=600&q=80" alt="Floral crepe midi dress" loading="lazy" width="600" height="750" />
+              <button type="button" class="quick-add" data-title="Floral crepe midi dress">Add to cart</button>
+            </div>
+            <div class="product-info">
+              <h3>Floral crepe midi dress</h3>
+              <div class="rating" data-rating="4.67"><span class="stars"></span><span class="rating-text">4.67 (6)</span></div>
+            </div>
+          </article>
+          <article class="product-card" data-id="5">
+            <div class="product-image-wrap">
+              <span class="badge-sale">-11%</span>
+              <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=600&q=80" alt="Lace-trimmed midi dress" loading="lazy" width="600" height="750" />
+              <button type="button" class="quick-add" data-title="Lace-trimmed midi dress">Add to cart</button>
+            </div>
+            <div class="product-info">
+              <h3>Lace-trimmed midi dress</h3>
+              <div class="rating" data-rating="3.33"><span class="stars"></span><span class="rating-text">3.33 (3)</span></div>
+            </div>
+          </article>
+          <article class="product-card" data-id="6">
+            <div class="product-image-wrap">
+              <span class="badge-sale">-23%</span>
+              <img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=600&q=80" alt="Short beaded dress" loading="lazy" width="600" height="750" />
+              <button type="button" class="quick-add" data-title="Short beaded dress">Add to cart</button>
+            </div>
+            <div class="product-info">
+              <h3>Short beaded dress</h3>
+              <div class="rating" data-rating="3"><span class="stars"></span><span class="rating-text">3.00 (6)</span></div>
+            </div>
+          </article>
+          <article class="product-card" data-id="7">
+            <div class="product-image-wrap">
+              <span class="badge-sale">-28%</span>
+              <img src="https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?w=600&q=80" alt="Short floral dress" loading="lazy" width="600" height="750" />
+              <button type="button" class="quick-add" data-title="Short floral dress">Add to cart</button>
+            </div>
+            <div class="product-info">
+              <h3>Short floral dress</h3>
+              <div class="rating" data-rating="4"><span class="stars"></span><span class="rating-text">4.00 (3)</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="split-banner">
+      <a href="#women" class="split-panel" id="women" style="--panel-img: url('https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1200&q=80')">
+        <div class="split-panel-inner">
+          <h2>Women</h2>
+          <p>Soft strength, refined details, and a confident silhouette shaped for contemporary style.</p>
+          <span class="link-arrow">Shop women</span>
+        </div>
+      </a>
+      <a href="#men" class="split-panel" id="men" style="--panel-img: url('https://images.unsplash.com/photo-1617137968427-85924c800a22?w=1200&q=80')">
+        <div class="split-panel-inner">
+          <h2>Men</h2>
+          <p>Clean structure, modern attitude, and effortless pieces designed for everyday confidence.</p>
+          <span class="link-arrow">Shop men</span>
+        </div>
+      </a>
+    </section>
+
+    <section class="section promo-strip">
+      <div class="container text-center">
+        <h2>Elevate your style with timeless elegance in the new collection</h2>
+        <a href="#featured" class="btn btn-primary">Explore collection</a>
+      </div>
+    </section>
+
+    <section class="section looks">
+      <div class="container two-col">
+        <div class="looks-image">
+          <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=900&q=80" alt="The looks you'll love" loading="lazy" width="900" height="1100" />
+        </div>
+        <div class="looks-copy">
+          <h2>The Looks You’ll Love</h2>
+          <p>Style that feels personal. Thoughtful design, refined materials, and looks made to last.</p>
+          <a href="#dresses" class="btn btn-outline">View dresses</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section featured" id="featured">
+      <div class="container">
+        <h2 class="text-center section-title">Featured Products</h2>
+        <div class="tabs" role="tablist">
+          <button type="button" class="tab active" role="tab" aria-selected="true" data-tab="jackets">Jackets</button>
+          <button type="button" class="tab" role="tab" aria-selected="false" data-tab="men-tab">Men</button>
+          <button type="button" class="tab" role="tab" aria-selected="false" data-tab="tops">Tops</button>
+          <button type="button" class="tab" role="tab" aria-selected="false" data-tab="women-tab">Women</button>
+        </div>
+        <div class="tab-panels">
+          <div class="tab-panel active" id="panel-jackets" role="tabpanel">
+            <div class="product-grid compact">
+              <article class="product-card">
+                <div class="product-image-wrap">
+                  <span class="badge-sale">-29%</span>
+                  <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&q=80" alt="STWD raincoat" loading="lazy" width="600" height="750" />
+                  <button type="button" class="quick-add" data-title="STWD raincoat with side stripes">Add to cart</button>
+                </div>
+                <div class="product-info">
+                  <h3>STWD raincoat with side stripes</h3>
+                  <div class="rating" data-rating="4"><span class="stars"></span><span class="rating-text">4.00 (3)</span></div>
+                </div>
+              </article>
+              <article class="product-card">
+                <div class="product-image-wrap">
+                  <span class="badge-sale">-18%</span>
+                  <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600&q=80" alt="STWD hooded jacket" loading="lazy" width="600" height="750" />
+                  <button type="button" class="quick-add" data-title="STWD hooded cotton jacket">Add to cart</button>
+                </div>
+                <div class="product-info">
+                  <h3>STWD hooded cotton jacket</h3>
+                  <div class="rating" data-rating="3"><span class="stars"></span><span class="rating-text">3.00 (3)</span></div>
+                </div>
+              </article>
+              <article class="product-card">
+                <div class="product-image-wrap">
+                  <span class="badge-sale">-39%</span>
+                  <img src="https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=600&q=80" alt="Lightweight jacket" loading="lazy" width="600" height="750" />
+                  <button type="button" class="quick-add" data-title="Short lightweight jacket with hood">Add to cart</button>
+                </div>
+                <div class="product-info">
+                  <h3>Short lightweight jacket with hood</h3>
+                  <div class="rating" data-rating="3.33"><span class="stars"></span><span class="rating-text">3.33 (6)</span></div>
+                </div>
+              </article>
+              <article class="product-card">
+                <div class="product-image-wrap">
+                  <span class="badge-sale">-26%</span>
+                  <img src="https://images.unsplash.com/photo-1620799140408-ed534dff3149?w=600&q=80" alt="Run & Brunch hoodie" loading="lazy" width="600" height="750" />
+                  <button type="button" class="quick-add" data-title="‘Run & Brunch’ hoodie">Add to cart</button>
+                </div>
+                <div class="product-info">
+                  <h3>‘Run & Brunch’ hoodie</h3>
+                  <div class="rating" data-rating="4.67"><span class="stars"></span><span class="rating-text">4.67 (3)</span></div>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="tab-panel" id="panel-men-tab" role="tabpanel" hidden>
+            <p class="placeholder-copy">Cùng bộ sưu tập áo khoác — chọn tab để lọc theo danh mục affiliate của bạn.</p>
+            <div class="product-grid compact">
+              <article class="product-card">
+                <div class="product-image-wrap">
+                  <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?w=600&q=80" alt="Men jacket" loading="lazy" width="600" height="750" />
+                  <button type="button" class="quick-add" data-title="Lightweight cotton jacket">Add to cart</button>
+                </div>
+                <div class="product-info">
+                  <h3>Lightweight cotton jacket</h3>
+                  <div class="rating" data-rating="4.33"><span class="stars"></span><span class="rating-text">4.33 (3)</span></div>
+                </div>
+              </article>
+              <article class="product-card">
+                <div class="product-image-wrap">
+                  <span class="badge-sale">-40%</span>
+                  <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=600&q=80" alt="Denim jacket" loading="lazy" width="600" height="750" />
+                  <button type="button" class="quick-add" data-title="Denim jacket">Add to cart</button>
+                </div>
+                <div class="product-info">
+                  <h3>Denim jacket</h3>
+                  <div class="rating" data-rating="3.67"><span class="stars"></span><span class="rating-text">3.67 (6)</span></div>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="tab-panel" id="panel-tops" role="tabpanel" hidden>
+            <div class="product-grid compact">
+              <article class="product-card">
+                <div class="product-image-wrap">
+                  <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=600&q=80" alt="Linen top" loading="lazy" width="600" height="750" />
+                  <button type="button" class="quick-add" data-title="Linen blend top">Add to cart</button>
+                </div>
+                <div class="product-info">
+                  <h3>Linen blend top</h3>
+                  <div class="rating" data-rating="4.5"><span class="stars"></span><span class="rating-text">4.50 (12)</span></div>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="tab-panel" id="panel-women-tab" role="tabpanel" hidden>
+            <div class="product-grid compact">
+              <article class="product-card">
+                <div class="product-image-wrap">
+                  <span class="badge-sale">-28%</span>
+                  <img src="https://images.unsplash.com/photo-1515372030864-a23e31ad57cb?w=600&q=80" alt="Floral dress" loading="lazy" width="600" height="750" />
+                  <button type="button" class="quick-add" data-title="Floral pattern midi dress">Add to cart</button>
+                </div>
+                <div class="product-info">
+                  <h3>Floral pattern midi dress</h3>
+                  <div class="rating" data-rating="4.67"><span class="stars"></span><span class="rating-text">4.67 (6)</span></div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section quote-block">
+      <div class="container narrow text-center">
+        <blockquote>
+          <p>We focus on well-designed, quality clothing that fits your lifestyle. Thoughtfully made for comfort, versatility, and everyday wear.</p>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="eco-banner">
+      <div class="eco-inner container">
+        <div class="eco-copy">
+          <h3>Fashion That Loves The Earth</h3>
+          <p>Designed responsibly for everyday life. Clean silhouettes, natural materials, and style that lasts beyond seasons.</p>
+          <a href="#journal" class="btn btn-outline-light">Choose your summer style</a>
+        </div>
+        <div class="eco-visual" style="background-image: url('https://images.unsplash.com/photo-1532453288672-3a27e9be9efd?w=1000&q=80')"></div>
+      </div>
+    </section>
+
+    <section class="section journal" id="journal">
+      <div class="container">
+        <h2 class="section-title text-center">From the Journal</h2>
+        <div class="journal-grid">
+          <article class="journal-card">
+            <a href="#" class="journal-thumb" style="background-image: url('https://images.unsplash.com/photo-1445205170230-053b83016050?w=800&q=80')"></a>
+            <div class="journal-body">
+              <time datetime="2025-07-09">9 Jul 2025</time>
+              <h3><a href="#">Talking Sustainable Fashion with an Eco-Friendly Influencer</a></h3>
+            </div>
+          </article>
+          <article class="journal-card">
+            <a href="#" class="journal-thumb" style="background-image: url('https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=800&q=80')"></a>
+            <div class="journal-body">
+              <time datetime="2025-07-09">9 Jul 2025</time>
+              <h3><a href="#">The Most Memorable Outfits from the Oscars Red Carpet</a></h3>
+            </div>
+          </article>
+          <article class="journal-card">
+            <a href="#" class="journal-thumb" style="background-image: url('https://images.unsplash.com/photo-1550614000-48995a195a63?w=800&q=80')"></a>
+            <div class="journal-body">
+              <time datetime="2025-07-09">9 Jul 2025</time>
+              <h3><a href="#">The Best Street Style Looks from London Fashion Week</a></h3>
+            </div>
+          </article>
+          <article class="journal-card">
+            <a href="#" class="journal-thumb" style="background-image: url('https://images.unsplash.com/photo-1490367532201-b9bc1dc483f6?w=800&q=80')"></a>
+            <div class="journal-body">
+              <time datetime="2025-07-09">9 Jul 2025</time>
+              <h3><a href="#">A Look at the Most Influential Fashion Award Ceremonies</a></h3>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="#top">Nurfia</a>
+        <p>Fashion affiliate demo — HTML/CSS/JS clone inspired by the Nurfia theme.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#women">Women</a></li>
+          <li><a href="#men">Men</a></li>
+          <li><a href="#dresses">Dresses</a></li>
+          <li><a href="#featured">Featured</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Size guide</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h4>Newsletter</h4>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" name="email" placeholder="Email của bạn" required />
+          <button type="submit" class="btn btn-primary">Đăng ký</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>© 2026 Nurfia demo. Educational clone — not affiliated with KLBTheme.</p>
+    </div>
+  </footer>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="cart-drawer-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer-panel">
+      <header class="cart-drawer-head">
+        <h2>Your Cart</h2>
+        <button type="button" class="icon-btn" id="cartClose" aria-label="Đóng giỏ hàng">&times;</button>
+      </header>
+      <ul class="cart-items" id="cartItems"></ul>
+      <p class="cart-empty" id="cartEmpty">Giỏ hàng trống.</p>
+      <footer class="cart-drawer-foot">
+        <p class="cart-total">Tổng: <strong id="cartTotal">$0</strong></p>
+        <button type="button" class="btn btn-primary btn-block">Checkout</button>
+      </footer>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
